@@ -1,6 +1,6 @@
 # mangoPi_v2
 ![Image of mangoPi_side](https://github.com/crispymangoes/mangoPi_v2/blob/main/mangoPi_rev2.JPG)
-The mangoPi is a FPGA development board designed to be for beginners. This repo combined with my youtube channel [Channel](https://www.youtube.com/channel/UCeLSZnDQhn2w7gunQxIRu9Q/videos) will allow you to understand the inner workings of this FPGA development board, as well as how to use it.Please note that this project is still very much in development, so the PCB design, and schematic have issues that will be fixed with the version 3 of this board. I'll be uploading my progress to my YouTube channel, so check it out if you are interested.
+The mangoPi is a FPGA development board designed to be for beginners. This repo combined with my [YouTube channel](https://www.youtube.com/channel/UCeLSZnDQhn2w7gunQxIRu9Q/videos), Crispy Mangoes, will allow you to understand the inner workings of this FPGA development board, as well as how to use it.Please note that this project is still very much in development, so the PCB design, and schematic have issues that will be fixed with the version 3 of this board. I'll be uploading my progress to my YouTube channel, so check it out if you are interested.
 ## Legal
 Raspberry Pi is a trademark of the Raspberry Pi Foundation. I am by no means associated with the Raspberry Pi Foundation. The mangoPi is an FPGA development board that is compatible with the Raspberry Pi Compute Module 3+. 
 
