@@ -28,3 +28,11 @@ Hi I'm Ryan aka Crispy. I am a self taught electronic enthusiast, with a degreee
 * 4 USB 2.0 ports
 * Camera connector for use with Pi Camera
 * Micro SD to hold OS, bitsreams, etc...
+
+## How to open the EasyEDA project files
+* Download Project_mangoPi Rev 2.0_2021-01-18_18-53-02.zip
+* Extract files wherever you want to store them
+* In EasyEDA go to File -> Open -> EasyEDA
+* Navigate to where you extracted the folder. You should see two json files, one for the PCB and the other for the schematic
+* Hold ctrl and select both of the files and click open
+* Once opened you will need to save them. You can add them to an existing project folder, or make a new one. 
