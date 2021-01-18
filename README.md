@@ -38,3 +38,27 @@ Hi I'm Ryan aka Crispy. I am a self taught electronic enthusiast, with a degreee
 * Navigate to where you extracted the folder. You should see two json files, one for the PCB and the other for the schematic
 * Hold ctrl and select both of the files and click open
 * Once opened you will need to save them. You can add them to an existing project folder, or make a new one. 
+
+## Editing the Revision 2
+There are a few issues with the revision 2, so if you did want to take this design and move forward with it, then I have outlined what works, what does not work below, and what I have not tested yet.
+### Notes
+* (WORKS)Pi bus that connects to the FPGA
+  * I used a 7.8MHz SPI Clock to communicate with the FPGA. Though in testing I was able to get it up to 31.2MHz
+* (KINDA WORKS)SRAM
+  * The SRAM can theoretically run at 200MHz(which gives you the 7.2Gbps bandwitdth), but with my verilog code I could only read and write data with a 100MHZ clock
+* (WORKS)ADC functions as expected
+* (WORKS)98 GPIO and buttons
+  * Everything works but the buttons I picked kinda suck so I'd choose a different model
+* (KINDA WORKS)DisplayPort
+  * I was able to connect a display port cable to the TX and RX connectors, and set a counting variable through the connection, but noticed a few issues
+   * The value would almost always be shifted by a random number of bits
+   * When I tried to use two GTP transceivers at once things went really funky and stopped working
+   * I think the GTP transceviers need more power the IC I use to supply the 1.2V line can only output 300mA
+* (UNKNOWN) Ethernet
+  * My plan was to use the AXI Ethernet IP to test if the ethernet worked, but the IP doesn't work if the IO voltage used is 3V3, but the IO bank connected to the Ethernet PHY is 3V3. So you would need to connect that IO bank to 2V5 or 1V8 in order to test it
+* (UNKNOWN) FT2232HQ
+  * I did not get around to testing this because of time constraints, and I am also unsure what use this IC will have on the board since the Compute Module can pretty much do everything that this IC would be needed for. I think, I am still pretty new to all this stuff so I could be completely wrong :)
+* (DOES NOT WORK)Pi Camera Connector
+  * I think that the camera connector was installed backwards. When I tested it, there was no camera detected, but if I flipped the camera then the 3V3 line was shorted to ground. I tried fixing this and flipping the connector, but I kinda screwed up the connector and solder connection in the process so it still does not work. Though I am pretty sure the only issue with it is the orientation of the connector(which should be oriented correctly in the above images of the board).
+* (WORKS) All other Pi interfaces
+  * I mainly develop headless with VS code, but have not had any issues with any other Pi interfaces.
